@@ -31,7 +31,7 @@ const Navbar = () => {
               href={link.href}
               className={`btn ${
                 isActive
-                  ? "bg-emerald-900 text-white"
+                  ? "bg-emerald-900 hover:bg-emerald-700 text-white"
                   : "btn-ghost text-slate-500"
               }`}
             >
