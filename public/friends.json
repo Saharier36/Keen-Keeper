@@ -7,7 +7,7 @@
     "days_since_contact": 18,
     "status": "overdue",
     "tags": ["college", "close friend"],
-    "bio": "Roommate from first year of university. We used to pull all-nighters for exams and eat biryani at midnight. Still the first person I call when something big happens.",
+    "bio": "Uni roommate, all-nighters and midnight biryani.",
     "goal": 14,
     "next_due_date": "2026-04-08"
   },
@@ -19,7 +19,7 @@
     "days_since_contact": 6,
     "status": "on-track",
     "tags": ["work", "mentor"],
-    "bio": "Senior dev at my first internship. She taught me how to actually read error messages and not panic. We grab coffee online every few weeks and catch up on life.",
+    "bio": "Internship mentor who taught me debugging.",
     "goal": 10,
     "next_due_date": "2026-04-19"
   },
@@ -31,7 +31,7 @@
     "days_since_contact": 25,
     "status": "overdue",
     "tags": ["childhood", "close friend"],
-    "bio": "Grew up on the same street. We learned to ride bikes together and got into trouble together too. Now lives in Chittagong but we used to talk every week.",
+    "bio": "Grew up on the same street together.",
     "goal": 21,
     "next_due_date": "2026-03-30"
   },
@@ -43,7 +43,7 @@
     "days_since_contact": 11,
     "status": "almost due",
     "tags": ["college", "study group"],
-    "bio": "We survived the same nightmare databases course together. She's now doing her Master's in Sweden and always sends photos of snow like it's still magical.",
+    "bio": "Survived databases together, now studying abroad.",
     "goal": 14,
     "next_due_date": "2026-04-14"
   },
@@ -55,7 +55,7 @@
     "days_since_contact": 4,
     "status": "on-track",
     "tags": ["developer", "motivator"],
-    "bio": "Met at a local hackathon in 2023. We hold each other accountable on side projects and share resources every week. He's building a SaaS and I'm rooting for him.",
+    "bio": "Hackathon friend building a SaaS startup.",
     "goal": 7,
     "next_due_date": "2026-04-17"
   },
@@ -67,7 +67,7 @@
     "days_since_contact": 33,
     "status": "overdue",
     "tags": ["school", "old friend"],
-    "bio": "Best friend from high school. We used to write notes to each other in class and laugh until teachers got annoyed. Life got busy but she always crosses my mind.",
+    "bio": "High school best friend, slowly drifted apart.",
     "goal": 30,
     "next_due_date": "2026-04-05"
   },
@@ -79,7 +79,7 @@
     "days_since_contact": 9,
     "status": "almost due",
     "tags": ["college", "project partner"],
-    "bio": "Built our final year project together — a smart parking system that actually worked. He's thorough, reliable, and always has strong opinions about code structure. Good ones.",
+    "bio": "Built our final year project together.",
     "goal": 10,
     "next_due_date": "2026-04-14"
   },
@@ -91,7 +91,7 @@
     "days_since_contact": 2,
     "status": "on-track",
     "tags": ["close friend", "creative"],
-    "bio": "Freelance illustrator and one of the most genuinely creative people I know. We brainstorm ideas together — she does the visuals, I think about the logic. Great balance.",
+    "bio": "Freelance illustrator, we brainstorm ideas together.",
     "goal": 7,
     "next_due_date": "2026-04-20"
   },
@@ -103,7 +103,7 @@
     "days_since_contact": 13,
     "status": "almost due",
     "tags": ["cousin", "family friend"],
-    "bio": "Technically a distant cousin but feels more like a brother. We grew up going to the same family events and somehow ended up in the same field. Now we swap job advice and complain about the market together.",
+    "bio": "Distant cousin, feels more like a brother.",
     "goal": 14,
     "next_due_date": "2026-04-16"
   },
@@ -115,7 +115,7 @@
     "days_since_contact": 42,
     "status": "overdue",
     "tags": ["school", "old friend"],
-    "bio": "We were inseparable in class 9 and 10. She moved to India for college and we lost touch gradually. Every time I see an old photo I think I should message her — and now I finally should.",
+    "bio": "School bestie, lost touch after she left.",
     "goal": 30,
     "next_due_date": "2026-03-25"
   },
@@ -127,7 +127,7 @@
     "days_since_contact": 5,
     "status": "on-track",
     "tags": ["work", "close friend"],
-    "bio": "We started as colleagues on the same frontend team and became genuine friends over late-night deployments and shared frustration over browser bugs. He moved to a different company but we still do weekly catch-ups over call.",
+    "bio": "Frontend teammate turned genuine close friend.",
     "goal": 7,
     "next_due_date": "2026-04-18"
   },
@@ -139,7 +139,7 @@
     "days_since_contact": 20,
     "status": "overdue",
     "tags": ["college", "close friend"],
-    "bio": "Met during orientation week and immediately bonded over a shared hatred of 8 AM classes. She was the most organized person in any group project and somehow made deadlines feel less terrifying.",
+    "bio": "Bonded at orientation over 8 AM classes.",
     "goal": 14,
     "next_due_date": "2026-04-07"
   }
