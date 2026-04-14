@@ -1,22 +1,42 @@
+"use client";
+import { useTimeline } from "@/context/TimelineContext";
 import { MessageSquareMore, PhoneCall, Video } from "lucide-react";
-import Link from "next/link";
-import React from "react";
+import { toast, ToastContainer } from "react-toastify";
 
-const CheckInButtons = () => {
+const CheckInButtons = ({ friendName }) => {
+  const { addEntry } = useTimeline();
+
+  const handleCheckIn = (type) => {
+    addEntry(type, friendName);
+    toast.success(`${type} with ${friendName}`);
+  };
+
   return (
-    <div className="grid grid-cols-3 gap-3">
-      <Link href="#" className="btn flex flex-col h-20">
-        <PhoneCall />
-        Call
-      </Link>
-      <Link href="#" className="btn flex flex-col h-20">
-        <MessageSquareMore />
-        Text
-      </Link>
-      <Link href="#" className="btn flex flex-col h-20">
-        <Video />
-        Video
-      </Link>
+    <div>
+      <ToastContainer position="top-center" />
+      <div className="grid grid-cols-3 gap-3">
+        <button
+          onClick={() => handleCheckIn("Call")}
+          className="btn flex flex-col h-20 bg-slate-50 hover:bg-emerald-50"
+        >
+          <PhoneCall />
+          Call
+        </button>
+        <button
+          onClick={() => handleCheckIn("Text")}
+          className="btn flex flex-col h-20 bg-slate-50 hover:bg-emerald-50"
+        >
+          <MessageSquareMore />
+          Text
+        </button>
+        <button
+          onClick={() => handleCheckIn("Video")}
+          className="btn flex flex-col h-20 bg-slate-50 hover:bg-emerald-50"
+        >
+          <Video />
+          Video
+        </button>
+      </div>
     </div>
   );
 };

@@ -65,15 +65,15 @@ const FriendDetailsPage = async ({ params }) => {
               Preferred: {email}
             </p>
           </div>
-          <button className="btn btn-block bg-white">
+          <button className="btn btn-block bg-white hover:bg-emerald-50">
             <BellOff />
             Snooze 2 weeks
           </button>
-          <button className="btn btn-block bg-white">
+          <button className="btn btn-block bg-white hover:bg-emerald-50">
             <Archive />
             Archive
           </button>
-          <button className="btn btn-block bg-white text-red-500">
+          <button className="btn btn-block bg-white text-red-500 hover:bg-red-50">
             <Trash2 />
             Delete
           </button>
@@ -118,7 +118,9 @@ const FriendDetailsPage = async ({ params }) => {
                   <span className="font-bold text-black">{goal} days</span>
                 </p>
               </div>
-              <button className="btn btn-sm">Edit</button>
+              <button className="btn btn-sm bg-slate-50 hover:bg-emerald-50">
+                Edit
+              </button>
             </div>
           </div>
 
@@ -128,7 +130,7 @@ const FriendDetailsPage = async ({ params }) => {
                 Quick Check-In
               </p>
 
-              <CheckInButtons friendName={name} friendId={id} />
+              <CheckInButtons friendName={name} />
             </div>
           </div>
         </div>
