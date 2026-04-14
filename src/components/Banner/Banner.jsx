@@ -1,11 +1,13 @@
 import { Plus } from "lucide-react";
 import Link from "next/link";
 
-const Banner = () => {
+const Banner = ({ stats }) => {
+  const { total, onTrack, overdue } = stats;
+  
   const cardData = [
-    { count: 10, label: "Total Friends" },
-    { count: 3, label: "On Track" },
-    { count: 6, label: "Need Attention" },
+    { count: total, label: "Total Friends" },
+    { count: onTrack, label: "On Track" },
+    { count: overdue, label: "Need Attention" },
     { count: 12, label: "Interactions This Month" },
   ];
 

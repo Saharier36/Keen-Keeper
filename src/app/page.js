@@ -2,12 +2,24 @@ import Banner from "@/components/Banner/Banner";
 import FriendCard from "@/components/FriendCard/FriendCard";
 
 export default async function Home() {
-  const res = await fetch("https://keen-keeper-sigma.vercel.app/friends.json");
+  const res = await fetch("http://localhost:3000/friends.json", {
+    cache: "no-store",
+  });
   const friends = await res.json();
+
+  const totalFriends = friends.length;
+  const onTrackCount = friends.filter((friend) => friend.status === "on-track").length;
+  const overdueCount = friends.filter((friend) => friend.status === "overdue").length;
+
+  const stats = {
+    total: totalFriends,
+    onTrack: onTrackCount,
+    overdue: overdueCount,
+  };
 
   return (
     <div className="bg-slate-50">
-      <Banner />
+      <Banner stats={stats} />
 
       <div className="max-w-6xl mx-auto border-t-2 border-base-300 px-6 py-10">
         <h2 className="text-2xl font-bold mb-6">Your Friends</h2>
