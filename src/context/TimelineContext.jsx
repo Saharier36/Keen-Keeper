@@ -15,6 +15,8 @@ const TimelineProvider = ({ children }) => {
         month: "short",
         day: "numeric",
         year: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
       }),
     };
     setTimeline((prev) => [newEntry, ...prev]);

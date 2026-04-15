@@ -1,21 +1,37 @@
 "use client";
 import { useTimeline } from "@/context/TimelineContext";
-import { ArrowDown, FileX } from "lucide-react";
+import { FileX } from "lucide-react";
 
 import call from "@/assets/call.png";
 import text from "@/assets/text.png";
 import video from "@/assets/video.png";
+
 import Image from "next/image";
 import { useState } from "react";
+
+import FilterDropdown from "@/ui/FilterDropdown/FilterDropdown";
+import SearchBar from "@/ui/SearchBar/SearchBar";
+import SortSelect from "@/ui/SortSelect/SortSelect";
 
 const TimelinePage = () => {
   const { timeline } = useTimeline();
   const [activeFilter, setActiveFilter] = useState("All");
+  const [search, setSearch] = useState("");
+  const [sortOrder, setSortOrder] = useState("newest");
 
-  const filterTimeline =
-    activeFilter === "All"
-      ? timeline
-      : timeline.filter((item) => item.type === activeFilter);
+ const timelineItems = timeline
+   .filter((item) => {
+     const typeMatch = activeFilter === "All" || item.type === activeFilter;
+     const searchMatch = item.friendName
+       .toLowerCase()
+       .includes(search.toLowerCase());
+     return typeMatch && searchMatch;
+   })
+   .sort((a, b) => {
+     const dateA = new Date(a.date);
+     const dateB = new Date(b.date);
+     return sortOrder === "newest" ? dateB - dateA : dateA - dateB;
+   });
 
   const getImg = (type) => {
     if (type === "Call") return call;
@@ -29,42 +45,18 @@ const TimelinePage = () => {
       <div className="max-w-6xl mx-auto">
         <h1 className="text-4xl font-bold mb-6">Timeline</h1>
 
-        <div>
-          <div className="dropdown w-full max-w-xs mb-8">
-            <div
-              tabIndex={0}
-              role="button"
-              className="btn w-full justify-between border-slate-200 bg-white text-slate-500 h-12"
-            >
-              <span>
-                {activeFilter === "All" ? "Filter timeline" : activeFilter}
-              </span>
-
-              <ArrowDown />
-            </div>
-
-            <ul
-              tabIndex={0}
-              className="dropdown-content menu bg-base-100 rounded-box z-1 w-full p-2 shadow-sm mt-1"
-            >
-              {["All", "Call", "Text", "Video"].map((category) => (
-                <li key={category}>
-                  <a
-                    className={`py-3 ${activeFilter === category ? "bg-emerald-50 text-emerald-900 font-bold" : ""}`}
-                    onClick={() => {
-                      setActiveFilter(category);
-                      document.activeElement.blur();
-                    }}
-                  >
-                    {category}
-                  </a>
-                </li>
-              ))}
-            </ul>
+        <div className="flex flex-col sm:flex-row sm:justify-between">
+          <FilterDropdown
+            activeFilter={activeFilter}
+            setActiveFilter={setActiveFilter}
+          />
+          <div className="flex gap-2 mb-4">
+            <SearchBar search={search} setSearch={setSearch} />
+            <SortSelect sortOrder={sortOrder} setSortOrder={setSortOrder} />
           </div>
         </div>
 
-        {filterTimeline.length === 0 && (
+        {timelineItems.length === 0 && (
           <div className="card bg-base-100 shadow-sm border border-slate-100 py-20">
             <div className="flex flex-col items-center gap-3 justify-center text-gray-500">
               <FileX size={40} />
@@ -74,7 +66,7 @@ const TimelinePage = () => {
         )}
 
         <div className="space-y-4">
-          {filterTimeline.map((card, index) => {
+          {timelineItems.map((card, index) => {
             const imgSrc = getImg(card.type);
             return (
               <div

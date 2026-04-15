@@ -1,10 +1,10 @@
-import CheckInButtons from "@/ui/CheckInButtons";
+import CheckInButtons from "@/ui/CheckInButtons/CheckInButtons";
 import { Archive, BellOff, Trash2 } from "lucide-react";
 import Image from "next/image";
 
 const FriendDetailsPage = async ({ params }) => {
   const { id } = await params;
-  const res = await fetch("http://localhost:3000/friends.json", {
+  const res = await fetch("https://keen-keeper-sigma.vercel.app/friends.json", {
     cache: "no-store",
   });
 
