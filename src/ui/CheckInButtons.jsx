@@ -7,6 +7,7 @@ const CheckInButtons = ({ friendName }) => {
   const { addEntry } = useTimeline();
 
   const handleCheckIn = (type) => {
+    toast.dismiss();
     addEntry(type, friendName);
     toast.success(`${type} with ${friendName}`);
   };

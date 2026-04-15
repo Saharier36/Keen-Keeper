@@ -1,9 +1,8 @@
 import { Plus } from "lucide-react";
-import Link from "next/link";
 
 const Banner = ({ stats }) => {
   const { total, onTrack, overdue } = stats;
-  
+
   const cardData = [
     { count: total, label: "Total Friends" },
     { count: onTrack, label: "On Track" },
@@ -21,11 +20,10 @@ const Banner = ({ stats }) => {
           Your personal shelf of meaningful connections. Browse, tend, and
           nurture the <br /> relationships that matter most.
         </p>
-        <Link href="/addFriend">
-          <button className="btn bg-emerald-900 text-white hover:bg-emerald-700">
-            <Plus /> Add a Friend
-          </button>
-        </Link>
+
+        <button className="btn bg-emerald-900 text-white hover:bg-emerald-700">
+          <Plus /> Add a Friend
+        </button>
       </div>
 
       <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 px-6">

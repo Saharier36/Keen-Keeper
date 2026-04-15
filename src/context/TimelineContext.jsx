@@ -9,8 +9,7 @@ const TimelineProvider = ({ children }) => {
 
   const addEntry = (type, friendName) => {
     const newEntry = {
-      id: Date.now(),
-      title: `${type} with ${friendName}`,
+      friendName: friendName,
       type: type,
       date: new Date().toLocaleString("en-US", {
         month: "short",
