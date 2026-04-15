@@ -19,19 +19,19 @@ const TimelinePage = () => {
   const [search, setSearch] = useState("");
   const [sortOrder, setSortOrder] = useState("newest");
 
- const timelineItems = timeline
-   .filter((item) => {
-     const typeMatch = activeFilter === "All" || item.type === activeFilter;
-     const searchMatch = item.friendName
-       .toLowerCase()
-       .includes(search.toLowerCase());
-     return typeMatch && searchMatch;
-   })
-   .sort((a, b) => {
-     const dateA = new Date(a.date);
-     const dateB = new Date(b.date);
-     return sortOrder === "newest" ? dateB - dateA : dateA - dateB;
-   });
+  const timelineItems = timeline
+    .filter((item) => {
+      const typeMatch = activeFilter === "All" || item.type === activeFilter;
+      const searchMatch = item.friendName
+        .toLowerCase()
+        .includes(search.toLowerCase());
+      return typeMatch && searchMatch;
+    })
+    .sort((a, b) => {
+      const dateA = new Date(a.date);
+      const dateB = new Date(b.date);
+      return sortOrder === "newest" ? dateB - dateA : dateA - dateB;
+    });
 
   const getImg = (type) => {
     if (type === "Call") return call;
@@ -41,7 +41,7 @@ const TimelinePage = () => {
   };
 
   return (
-    <div className="py-15 px-6 bg-slate-50">
+    <div className="min-h-screen py-15 px-6 bg-slate-50">
       <div className="max-w-6xl mx-auto">
         <h1 className="text-4xl font-bold mb-6">Timeline</h1>
 
@@ -58,9 +58,9 @@ const TimelinePage = () => {
 
         {timelineItems.length === 0 && (
           <div className="card bg-base-100 shadow-sm border border-slate-100 py-20">
-            <div className="flex flex-col items-center gap-3 justify-center text-gray-500">
-              <FileX size={40} />
-              <p className="text-lg">No data found</p>
+            <div className="flex flex-col items-center gap-3 justify-center text-slate-400">
+              <FileX size={48} strokeWidth={1.5} />
+              <p>No data found</p>
             </div>
           </div>
         )}

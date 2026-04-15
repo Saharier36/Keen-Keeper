@@ -31,7 +31,7 @@ const FriendDetailsPage = async ({ params }) => {
   } = friend;
 
   return (
-    <div className="px-6 py-20 bg-slate-50">
+    <div className="min-h-screen px-6 py-20 bg-slate-50">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-[320px_1fr] gap-4">
         <div className="flex flex-col gap-3">
           <div className="card text-center shadow-sm border border-slate-100 bg-base-100 p-6">

@@ -18,7 +18,7 @@ export default async function Home() {
   };
 
   return (
-    <div className="bg-slate-50">
+    <div className="min-h-screen bg-slate-50">
       <Banner stats={stats} />
 
       <div className="max-w-6xl mx-auto border-t-2 border-base-300 px-6 py-10">
