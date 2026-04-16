@@ -41,7 +41,7 @@ const TimelinePage = () => {
   };
 
   return (
-    <div className="min-h-screen py-15 px-6 bg-slate-50">
+    <div className="min-h-screen py-10 px-6 bg-slate-50">
       <div className="max-w-6xl mx-auto">
         <h1 className="text-4xl font-bold mb-6">Timeline</h1>
 

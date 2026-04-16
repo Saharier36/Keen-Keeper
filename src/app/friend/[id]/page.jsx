@@ -31,24 +31,24 @@ const FriendDetailsPage = async ({ params }) => {
   } = friend;
 
   return (
-    <div className="min-h-screen px-6 py-20 bg-slate-50">
+    <div className="min-h-screen px-6 py-10 bg-slate-50">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-[320px_1fr] gap-4">
         <div className="flex flex-col gap-3">
-          <div className="card text-center shadow-sm border border-slate-100 bg-base-100 p-6">
-            <div className="avatar flex justify-center mb-4">
+          <div className="card text-center shadow-sm border border-slate-100 bg-base-100 p-6 space-y-1">
+            <div className="avatar flex justify-center">
               <div className="w-24 rounded-full">
                 <Image src={picture} alt={name} width={96} height={96} />
               </div>
             </div>
             <h3 className="font-bold text-lg">{name}</h3>
-            <div className="mt-2">
+            <div>
               <span
                 className={`badge text-white font-medium rounded-full capitalize ${statusStyles[status]}`}
               >
                 {status}
               </span>
             </div>
-            <div className="flex flex-wrap justify-center gap-2 mt-2">
+            <div className="flex flex-wrap justify-center gap-2">
               {tags.map((tag, index) => (
                 <span
                   key={index}
@@ -58,10 +58,10 @@ const FriendDetailsPage = async ({ params }) => {
                 </span>
               ))}
             </div>
-            <p className="text-slate-500 font-medium italic mt-2">
+            <p className="text-slate-500 font-medium italic">
               &quot;{bio}&quot;
             </p>
-            <p className="text-slate-500 text-sm font-medium mt-1">
+            <p className="text-slate-500 text-sm font-medium">
               Preferred: {email}
             </p>
           </div>
@@ -113,7 +113,7 @@ const FriendDetailsPage = async ({ params }) => {
                 <p className="text-emerald-900 text-xl font-medium mb-2">
                   Relationship Goal
                 </p>
-                <p className="text-slate-500 font-medium">
+                <p className="text-slate-500 text-lg">
                   Connect every{" "}
                   <span className="font-bold text-black">{goal} days</span>
                 </p>

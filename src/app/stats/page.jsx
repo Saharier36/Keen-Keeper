@@ -21,7 +21,7 @@ const StatsPage = () => {
   ].filter((item) => item.value > 0);
 
   return (
-    <div className="min-h-screen bg-slate-50 py-15 px-6">
+    <div className="min-h-screen bg-slate-50 py-10 px-6">
       <div className="max-w-6xl mx-auto">
         <h1 className="text-4xl font-bold mb-8 text-slate-800">
           Friendship Analytics
