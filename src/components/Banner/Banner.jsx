@@ -11,7 +11,7 @@ const Banner = ({ stats }) => {
   ];
 
   return (
-    <section className="py-12">
+    <section className="py-10">
       <div className="text-center space-y-4 mb-10 px-4">
         <h1 className="text-4xl md:text-5xl font-bold">
           Friends to keep close in your life
